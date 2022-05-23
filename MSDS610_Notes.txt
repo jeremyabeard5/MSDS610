@@ -1,0 +1,39 @@
+MSDS610 - Data Engineering
+
+Tuesday 20220503
+	WEEK 1
+		TODO
+			-Read the Stitch report
+			-Lightly read white paper about Big Data + cloud computing innovation opportunities and challenges
+			-Briefly review white paper about Software Engineers and Data Engineers
+			-Take a look at What is Data Science
+			-Complete lab through word count example
+			-Ignore alternate assignment
+			-Use Week 1 lab supplemental RTM for week 1 lab
+			-upload MS word document "Beard-Week-1-Lab.docx"
+			-Post discussion response by Wednesday evening
+			-Respond to at least 2 others posts by Sunday evening
+			
+			Discussion:
+				Post your introduction by Wednesday of Week 1. 
+
+				Your facilitator will post an introduction in the “Introductions” Discussion Forum. Using the facilitator’s introduction as a model, introduce yourself to the class including:
+
+				Your contact information: name, email address, location, and time zone (phone number optional).
+				Your job title.
+				Hobbies, interests, and any other relevant information about yourself for the course.
+				Include a brief reflection on one or two of the Ignatian Jesuit Values (ethics, social justice, men/women for others, God in all things, and/or global awareness) and reflect on what Jesuit Values means to you as they relate to this course.
+				Any additional information required by your facilitator.
+				
+		HW:
+			docker run -it --rm --name hadoop1 -v /home/jeremy/Documents/GitStuff/Regis/simple_Hadoop_MapReduce_example:/hadoop_map_reduce:Z 3b127e41e697 /bin/sh
+				this maps the local drive to /hadoop_map_reduce
+				
+			docker run -it --rm --name hadoop1 -v /home/jeremy/Documents/GitStuff/Regis/simple_Hadoop_MapReduce_example:/hadoop:Z 3b127e41e697
+				actually, i guess the /bin/sh affected things
+				
+20220522
+	Week 3 Assignment
+		psql readychef < C:\Users\jerem\OneDrive\Documents\School\_REGIS\2022-05_Summer\MSDS610\Week3\readychef.sql
+				
+			
