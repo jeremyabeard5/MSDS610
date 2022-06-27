@@ -1,0 +1,39 @@
+MSDS 610 Course Project
+
+Inverted Index
+
+Project purpose is vague, some struggle may be required, that is intentional
+
+Inverted Index Project
+	Word doc
+	Has all code, but written in java
+	
+spark-wordcount.ipynb example
+	lets you work with spark, spark commands
+	
+Putting 2 examples above toggether can help you create inverted indexc in pyspark
+
+Will need to have completed Lab 5 (anaconda installed) in order to do project
+
+Dataset: will be stack overflow data
+
+
+VIDEO 2
+	Looking at stack overflow for thje project data
+	Will be getting the stack overflow data from stackexchange
+		go to https://data.stackexchange.com
+			Compose Query
+			Need to create an inverted index listing all the Post IDs where each tag appears
+			Shows database Scheme
+				
+			My query will need Post IDs and tags and maybe filtering on creationdate
+			Then click on Download csv
+			Then load csv into jupyter notebooks and use pyspark commands to load it into HDFS
+			then start to relate the wikipedia inverted index example to creating it using pyspark
+			also look at the pyspark wordcount example
+			
+VIDEO 3
+	
+	
+Notes;
+	Using hadoop 3.2.1, Java 8 JDK

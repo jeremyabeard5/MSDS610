@@ -1,0 +1,670 @@
+Intro to Data Science
+Notes
+20220116
+	Week 1 Presentation
+		People / Directory of Names
+		Much time is spent just cleaning data
+		Big Data
+			Volume(size), Variety(type), Velocity(how fast updated)
+		DS Process
+			Ask, Get, Explore, Model, Communicate
+		Most Popular Languages
+			Python, SQL, R
+	Week 1 Reading
+		Python Data Science Essentials,
+			Sections:
+				First Steps (“First Steps” through “Alternatives to Jupyter”)
+				Strengthen Your Python Foundations (“Strengthen your Python Foundations” through “Don’t be shy, take a real challenge”)
+		Python for Data Science for Dummies
+			Sections:
+				Ch. 1 and 2
+		Python Data Science Essentials
+			First Steps
+				Data Science is:
+					linear algebra, 
+					statistical modeling, 
+					visualization, 
+					computational linguistics, 
+					graph analysis, 
+					machine learning, 
+					business intelligence, 
+					and data storage and retrieval.
+				Python is awesome, basically
+				The rest of First Steps was just setup, installing everything on Windows
+				Getting jupyter setup
+		PfDSfD
+			Ch 1
+				Data Science is:
+					Data Capture
+					Data Analysis
+					Presentation
+				
+		
+
+
+
+20220121 Friday
+	Week 2 
+		Even if data sets are different, processing is the same
+			Data Acquisition
+			Data Extraction
+			Data Preprocessing
+			Data Analysis
+			Data Presentation
+		Most data scientists spend 75-90% time cleaning data
+		Data Preparation, Part Of :
+			Business understanding
+			Data understanding
+				EDA, visualization
+			Data Preparation
+			Modeling
+			Evaluation
+			Deployment
+		FINDING Outlier Boundary
+			Upper Boundary = Q3 + 1.5*IQR
+			Lower = Q1 - 1.5*IQR
+		Dealing With Outliers
+	Week 2 Reading
+		Data Science With Python, Chapter 1
+			Introduction
+				Data is all around us
+				Machine Learning: computers accomplishing tasks without human intervention using statistics and pattern recognition
+			Python Libraries: pandas, Matplotlib, Seaborn, and scikit-learn
+				Pandas: open-sources, loading/processing data, analysing/manipulating data, csv is popular
+				Numpy: Main python data science package, used with scientific computing and working on mathematical operations, working with arrays
+				Matplotlib: data visualization package, uses numpy, 2d visualization
+				Seaborn: data visualization based on matplotlib, more attractive graphics
+				scikit-learn: Python package for machine learning
+			Building Machine Learning Models
+				Data Pre-processing
+					cleaning
+					most important step
+				Model Learning
+					models: using methods to find patterns and make prediction. algorithms can be supervised, semisupervised, unsupervised, and reinforcement learning
+				Model Evaluation
+					using performance metrics, models are tuned
+				Prediction
+					after happy with evaluation, start prediction, helping decision makers
+				Model Deployment
+					some report, model, management, maintenance
+				******this chapter focuses on pre-processing***
+			Data Representation
+				csv
+				pandas loads data into dataframes
+				DataFrame variables can be classified in 2 categories: independent variables and dependent(target) variables
+				Single Data: Scalar
+				Group of Scalars: Vector
+				Group of Vectors: Matrix
+			Data Categories
+				Numerical vs. Categorical
+					Numerical: ###'s
+					Categorial: string or non-numerical
+				Discrete vs. Continuous
+					Discrete: ints
+					Continuous: floats
+				Ordered vs. Nominal
+					Nominal: not ordered
+			Then a bunch of Jupyter notebook stuff - DataSciencewithPython-Chapter1.ipynb
+		Python for Data Science for Dummies, Chapter 5
+			Understanding the Tools
+				Learning anaconda/ipython help
+				Learned how to change from 'Code' to 'Markdown' in Jupyter
+				
+				
+20220128 Friday
+	Week 3: Machine Learning
+		FTE PDF - Week 3
+			ML combines math, statistics, and algorithms with computer programming to enable computers to automatically learn patterns from data
+			AI/ML used interchangeably sometimes
+			Simpler Algorithms
+				Logistic Regression
+			More Advanced Algorithms
+				lightGBMs
+				Neural Network methods
+			Algorithms - 3 GROUPS
+				Supervised learning
+					Learned is trained with known outputs (targets) or labeled examples.
+					Labeled examples employed during the training process.
+					In testing process, only unlabeled data are used.
+					Supervised Learning Examples
+						artificial neural networks
+						decision trees
+						Naive Bayes
+						Bayesian believe network
+						logistic regression
+				Unsupervised learning
+					Learner is trained with no label data. Therefore, learner must try to find some hidden structures in the data. 
+					Input data are clustered into classes based on their feature properties.
+					Unsupervised Learning Examples
+						Self-organizing maps (SOM)
+						K-means
+				Reinforcement learning
+					Learner learns by interaction with the environment.
+					Input is fed to learner, then action/response is determined. THEN, learner adjusts its behavior from feedback.
+					Over time, best performance is achieved by trial and error.
+					Reinforcement Learning Examples
+						Robot control systems
+						Q-learning
+			ML closely related with Data Mining
+				Data mining is more focused on searching for patterns and relationships in a database.
+				Data mining employs techniques from ML, Pattern recognition, statistics
+				Data mining is crucial part of Knowledge Discovery in Databases (KDD)
+					Other parts of KDD:
+						Data preparation
+						Data selection
+						Data cleaning
+				Goals of Data Mining
+					Predictive Modeling: classification, regression, time series analysis
+					Descriptive Modeling: clustering, summarization, association rules
+				General Tasks of Data Mining
+					Classification
+						Maps input data into one of predefined classes. Example: mapping loan/no-loan to clients
+						Learning Process: training phase, then testing phase
+							Training Phase:
+								Build models with generalization capability
+									Generalization: ability to accurately predict the class labels that have never before seen during the training phase
+							Testing Phase:
+								Used to measure performance of the model (# predicted correctly/incorrectly)
+							Inputs: 2 *non-overlapped* datasets:
+								Training set
+									Label examples
+								Testing set
+									No-label examples
+								Not uncommon to also have *Validation set: examples used to adjust the architectures and error estimation of the model
+						Classification Techniques:
+							Decision Trees
+							Rule-base Classifier
+							Naive Bayes
+							Supper Vector Machine
+							Neural Networks
+					Regression
+						Function that maps a data item to a real-valued prediction.
+						Used to estimate probability of survival patients based on diagnosis tests, predict customer default based on income, predict revenue from advertisement cost
+					Clustering
+						Clustering: example of descriptive modeling
+						Set of clusters is identified as the result of data description
+						Objects in the same group are similar in the group but different from objects in other groups
+						Inputs are grouped according to similarity metrics such as Euclidean distance, Jaccard similarity, Tanimoto coefficient, and cosine similarity on data objects
+						One of the most often used techniques is K-means
+					Summarization
+						Summarization: General overview of the data, usually dealing with aggregation information in various ways
+						Different abstraction levels, different angles, different combinations
+					Association Analysis
+						AA: signifies co-occurence of items
+						Focus: extracting interesting patterns that underly the associated features in data
+						The relationships discovered can be formulated as association rules
+						Applications consist of market basket analysis (items that customers buy together), genes that co-exist with particular diseases, etc
+					Anomaly Detection
+						AD: To pinpoint data points that behave significantly different from other data points. Called anomalies or outliers
+						Ideally, anomaly detection algo's should have high detection rates but low false alarm rates
+						Applications include credit card fraud, network intrusion, rare disease pattern
+				Common Data Mining Methodologies
+					Decision Trees
+						Used for predictive modeling in classification and regression
+						Model is easily understood and interpreted
+						Decision tree algo's include ID3, C4.5 (Quinlan, 1993), and CART.
+						Objective of DT is to predict the accurate class attribute from the non-class attributes. 
+						Tree structure depends on chosen features and threshold
+						DT is built recursively
+							Training records (attribute/value pairs) are partitioned into subsets
+							Partitioning stops when records have the same class labels, same attribute values, number of records fall below minimum threshold, or max. depth is reached
+							Selecting the best split relies on the degree of impurity, the smaller the better
+							A node with (0,1) class distribution has impurity 0 whereas node with (0.5,0.5) uniform distro has the highest impurity
+							Here, we want the node to be pure or one class dominates
+							Impurity Measures: Entropy and Gini index
+							Attribute with the highest information gain will be selected.
+							In ID3, information gain can be calculated from finding the difference between the values of impurity measure (i.e. entropy) before split and after
+							For example
+								Gain(X,T) = Info(T) - Info(X,T)
+							In C4.5, gain ratio is utilized
+								GainRatio(X,T) = Gain(X,T) / SplitInfo(X,T)
+						DT should be pruned to avoid overfitting (certain depth of subtree below would be cut off)
+							Overfitting happens when model does not generalize well or gives less accuracy in a new data set.
+					Bayes Theorem (simple form)
+						P(Y|X) = ( P(X|Y) P(Y) ) / P(X)
+							X: attribute set
+							Y: class variable
+							P(Y): prior probability or Y
+							P(X): prior probability of training data X (evidence)
+							P(Y|X): probability of Y given X (Y after X is observed) (posterior probability for Y)
+							P(X|Y): probability of X given Y (X after Y is observed) (class conditional probability)
+							Conditional probability can be represented as:
+								P(X|Y=y) = Product(i=1:d) P(Xi|Y=y)
+									Attribute set X consists of d attributes {X1, X2, X3, ..., Xd}
+									P(X) is fixed for every Y
+									Therefore, posterior probability can be formulated as:
+										P(Y|X) = [ P(Y) Product(i=1:d) P(Xi|Y=y) ] / P(X)
+					Bayesian Believe Network (BBN)
+						BBN: Graphical model that represents probabilistic relationships among random variables
+						Contrary to Naive Bayes where all attributes from class conditional probability P(X|Y) are assumed conditionally independent,
+							Bayesian network approach can specify which attribute pairs are conditionally independent
+						Important components of Bayesian network include:
+							1. The dependence relationships in a set of variables are presented with a directed acyclic graph (DAG)
+							2. Each node has its own probability table that associated with its immediate parent nodes
+						BBN can be applied in medicine, bioinformatics, and decision support systems
+					Artificial Neural Network (ANN)
+						ANN: inspired by biological neurons
+						Many inputs and one output unit
+						Output can be excited (fired) or not excited (not fired)
+						ANN consists of many nodes (computing units)
+						Weights: connections between nodes, which encode with the learning information
+						Node receives input from the external source or other nodes
+						Each input is associated with the weight.
+						Node computes the weighted sums of its inputs, including applying a function called activation functino to this result
+						Output from computation can be served as input to other units
+						There are many ANN architectures
+							simple one called perceptron by Rosenblatt.
+							Perceptron aka Single-Layer Perceptron: linear classifier that consists of only input layer (receive inputs from environ) and output layer (produce output back to environ)
+							This is simplest feed-forward network
+								FFN: network where nodes in one layer connected to the nodes in the next layer. 
+									Network = Multilayer Neural Networks: consists of hidden layers (layers between input and outut nodes)
+									Multilayers with at least one hidden layer are universal approximators. This means the networks can approximate any functions given that they have enough computation units.
+						Most popular algorithm to train the network is back-propagation innovated by Rumelhart and McClelland
+							Back-Prop adjusts weights based on activation functions such as sigmoid.
+							Objective: reduce sum of squared error between the desired output (target) and the output calculated by the network.
+							Back-Prop is example of supervised learning where the target is known
+						Application of neural networks: stock market prediction, hand written / spoken words recognition, image compression, loan/CC approval, control systems
+					K-means
+						K-means: unsupervised learning
+						Popular technique for grouping (clustering) objects because of its simplicity and speed
+						Objective: partition n observation objects into K clusters so that distance between objects and cluter centroids are minimized.
+						Centroid: mean of object cluster
+						At beginning, cluster numbers (constant K) are specified). Algo will randomly choose the K objects as the initial centroids
+						Then, these 2 steps are repeasted until centroids converge or do not change
+							1. assign each object to one of K clusters based on its closet centroid
+							2. re-compute the new centroid for each cluster
+						Assigning objects to the appropriate clusters can be expressed using the similarity measure such as Euclidean distance, COsine, etc.
+						Using right measures of closeness will have a great impact on the results
+						Disadvantages of this algo include: results from each run may not be the same, and , # of clusters must be specified at the beginning
+		Video Lectures - Week 3
+		VIDEO 1
+			Using CRISP-DM project management cycle
+			Already did Business Understanding, Data Understading, and Data Preparation
+				our example (diabetes/no diabetes), assignment (churn/no churn)
+			This week: Modeling/Deployment
+			Machine Learning: CPU algo's that learn patterns
+				supervised
+				unsupervised
+				reinforcement
+				can also have semi-supervised
+			ML uses math and statistics
+			We will cover supervised this week
+			Supervised
+				Features (inputs) and targets (outputs, labels)
+				Classification
+					Binary: 0 and 1, such as diabetes / no diabetes
+					Multi-class: any # (dog breeds)
+					Multi-label: multi-class, but each datapoint can have multiple classes (topics for news articles)
+				Simple algos: logistic and linear regression
+				More complex: decision trees, random forests, boosting algos
+			Unsupervised
+				No labels
+				Mostly clustering algorithms, K-means, etc
+				Clustering: grouping un=labeled data into groups
+			Reinforcement
+				System learns from positive/negative rewards in environment
+				This is difficult, but exciting
+				OpenAI, Google's Deep Mind
+			Important about ML: Bias-Variance Trade-Off
+				Linear fit vs. Polynomial fit
+				Judging overfitting (too complex) (high variance): low error but model can't predict new data
+				Opposite site: high bias (large error) on all data points. Leads to high error also
+				Can train model for more high bias or more high variance
+			To check for high bias/variance: split data into Training and Testing sets. (testing=validation)
+				Majority of data will be Train, minority will be Test
+				If Train accuracy is much higher than Test, then that's a sign of overfitting
+			We'll mainly stick to simple model for binary classif.: Logistic Regression
+				Easy to use
+				Pretty fast
+				X: dataset, features
+				P(X): probability (of diabetes)
+				Log(p/(1-p)) is the logit, or log-odds
+				Linearly related to coefficients (betas, B1, B2, etc)
+				Logit with a single feature is the sigmoid curve
+					Assumes linear relationships between log odds and features
+					Independent samples (each datapoint doesn't affect others)
+			Python packages
+				scikit-learn (sklearn) and related scikit packages (eg scikit-optimize and many more)
+				h20
+				pyspark (for big data)
+				statsmodels (more classic stats methods)
+				Neural Network Libraries (tensorflow/keras, pytorth, etc.)
+				autoML: pycaret, TPOT, etc
+				More
+				We will use sklearn this week
+		VIDEO 2: FTE Video
+			In FTE assignment
+				First step: loading packages
+				Then Modeling (step 4)
+					We need features and targets for supervised learning
+					Targets: 0/1 values related to diabetes
+					We want to split data into Train and Test sets
+						using scikitleaern train_test_split function
+							stratify argument: tells function we should keep proportion of classes and targets the same between Test and Train sets
+							outputs X_train and X_test (features for Train/Test) and Y_train and Y_test (targets for Train/Test)
+					Then we increase iterations to 1000
+				Then Evaluation (step 4)
+					Easiest metric: accuracy (# correct / total samples), compared to 'no information rate'
+					NIR: simple approx is just to look at the proportion of different classes (84.6% of data is no-diabetes, so we can just predict 0 for all, and get 84.6% accuracy)
+					use the score model, give it features and targets
+					another way to evaluate: confusion matrix
+						scikitlearn has plot_confusion_matrix
+						takes model, features, targets, and outputs true positives/negatives and predicted positives/negatives. shows you false negatives and false positives
+						We prolly wanna worry about true positives (maximize) and minimize false negatives (telling someone they don't have diabetes when they actually do)
+							We can maximize True Positive Rate (true poz / (true poz + false neg) )
+							All scikitlearn functions have a proba function : changing threshold for rounding these predictions
+							proba: predicts probabilities for classes and classification
+								give it features, outputs probabilities
+								can select first column and choose our threshold, see how it affects the True Positive Rate
+					can also look at accuracy score before and after we changed the threshold, can look at true positive rate before and after changing
+						lower accuracy but higher true positive rate (***tradeoffs***)
+					Last thing: we can look at the coefficients (betas B1 B2 etc in logit equation from slideshow)
+						lr_model.coef can show us coefficients, then we get columns, match them up to a dataframe, plot em
+				Then Deployment:
+					Automate using API
+					Can integrate model into software system
+				CORRECTION
+					changing "brief summary writeup" section , 91% accur on TEST data, not training
+		Week 3 Reading
+			Data Science with Python
+				Remainder of Ch 1 after Data Discretization + Ch 3
+					Ch. 3: Intro to ML via scikit-learn
+						sklearn has supervised and unsupervised ML algos
+						REGRESSION: a single dependent variable is predicted using one+ independent vars
+							Can be linear or logistic regression
+							LINEAR REGRESSION: draw straight line thru inputs that minimizes distance between line and inputs
+								SIMPLE and MULTIPLE
+								SIMPLE LINEAR REGRESSION: y=mx+b, only one mx
+									(see jupyter notebook examples in wk 3 folder)
+								MULTIPLE LINEAR REG: y=mx+mx+mx+b, multiple m's and x's (x1, x2...)
+							LOGISTIC REGRESSION: 
+								When dependent variable has only 2 outcomes, it is binary logistic regression
+									2+ = "multinomial logistic regression
+						Max Margin Classification Using SVMs (Support Vector Machine)
+							SVM: Algorithm for supervised learning, solves both classification and regression problems
+								Most commonly used in classification problems
+								Goal of SVM: determine best location of a 'hyperplane' that create a class boundary between 
+											data points plotted on a multidimensional space
+								Location of Hyperplane: position that creates max. separation between 2 classes
+									^^^Max. Margin Hyperplane (MMH)
+						Decision Trees
+							Use either gini impurity or entropy
+							Root node: feature that maximizes value indicating quality of a split
+								Then divided into next-most important feature, and so on
+								"divide and conquer"
+							
+			Data Science for Dummies, 2nd Ed. Ch. 4
+				Chapter 4: Machine Learning
+					ML: applying algo's to data in an iterative manner, so cpu discovers hidden patterns/trends
+					3 Main Steps in ML:
+						Setting Up
+							Acquiring data
+							Preprocessing
+							Feature Selection
+						Learning
+							Model Experimentation
+							Training
+							Building
+							Testing
+						Application
+							Model Deployment
+							Prediction
+					Good rule of thumb: use 2/3 of dataset as data to train, use 1/3 as test data
+					Feature: Independent Variable
+					Target: Dependent Variable
+					Feature selection: selecting appropriate variables
+					Supervised:
+						example: logistic regression
+					Unsupervised:
+						example: k-means clustering
+					Reinforcement
+					
+						
+					
+		
+		
+		
+		
+		
+		
+20220206 Sunday
+	Week 4: Decision Trees (Tree-based ML and Feature Selection
+		FTE PDF - Week 4
+			Decision Trees: split data into groups automatically based on features which give the best split between classes
+				Try different features and different splits, then calculate purity of splitting categories (Gini impurity or entropy)
+				Majority class in each leaf is the prediction
+				Data does not need to be scaled (unlike distance-based algos like KNN and other algos like neural networks)
+				Prone to overfitting (high variance)
+			Gini criterion = Gini impurity = Gini index
+				Gini = 1 - SUM(p^2)
+			Entropy
+				Slightly more complex than Gini
+				Minimum (best) is 0, when the samples in a leaf node are all one class
+				Entropy = -1 * SUM(p_j * log_2 * p_j)
+			Regression 
+				Most ML algorithms in sklearn have a regression component
+					Example: DecisionTreeClassifier has DecisionTreeRegressor
+				Uses different criterion than what we've seen so far 
+				Instead of Gini or Entropy, these use things like MSE (mean squared error)
+					MSE: takes difference between each prediction and actual, squares it, then sums it
+				Counterpart to logistic regression = linear regression
+			Random Forests
+				Random Forests: takes many decision trees and average their predictions to get final prediction
+				Sample datapoint from entire dataset, enough times that we have same # in sample as original
+				BOTH a classifier and a regressor random forest class in sklearn
+				Do that for a specific number of trees
+			Feature Importances
+				Curse of Dimensionality: as we add more features, we need exponentially increasing numbers of datapoints
+					Solution: collect more data or remove some features
+					Too many features = poor performance of ML algorithms (overfitting or underfitting)
+				Picking the best features
+					Univariate statistics (correlation, mutual information score, chi2 score, etc)
+					Forward and backward selection with ML algos: add/subtract features until we have good performance and minimal features
+					Recursive: same as forward/backward but trying all features
+					Feature importance methods: rank features based on importance (Gini or entropy gain for trees)
+			Pearson Correlation
+				Measures linear relationship strength between two variables
+				-1 to +1, with 0 being no correlation and -1 and +1 being perfect correlation
+				Formula
+					r = Sum((x_i - x_bar)(y_i - y_bar)) / Sqrt(SUM((x_i-x_bar)^2) * SUM((y_i-y_bar)^2))
+			Phi-K Correlation
+				Newer version of correlation
+				Bins numeric groups into categories and uses chi-2 correlation
+		Video Lectures - Week 3
+			Review from last week
+				Different Types of Machine Learning
+					Supervised
+					Unsupervised
+					Reinforcement
+					Semi-supervised
+				Hi Bias vs. Hi Variance: Hi Bias=linear fit, high error, Hi Variance=too specific
+				Logistic regression: simple model for binary classification
+			This Week: decision trees as machine learning algo
+			Decision Tree
+				Goal: get all no-diabetes on one side and all diabetes on the other side
+				Each node: value=diabetes vs. no-diabetes #'s, adds up to samples
+				Prone to overfitting
+			Gini Criterion
+				"1 minus the sum of probility squared over all classes"
+			Entropy
+				Also called "information gain"
+				Minimum: 0. That's best, when there's only one class in a node
+			Regression
+				MSE: mean squared error = SUM(differences^2)
+			Random Forests: collection of decision trees
+				Each decision tree is a bit different
+				All DT's make their prediction
+				Average all predictions (or combine in some way) to get final prediction
+				Each split uses subset of the features (can be randomly chosen) to see which features give the best split
+				Can set # of trees we want
+				Random forests usually outperform decision trees
+				Random forests are easy to parallelize
+			Feature importance
+				Need to shrink features so the ML algorithm can perform well
+				"as we increase the # of features, we need to have an exponentially increasing # of data points"
+				Line vs. Square vs. Cube 
+				Rank features in order of importance (can use Gini index (whichever feature gives us biggest increase in impurity of split) )
+			Pearson correlation
+				Measures correlation between 2 variables
+			Phi-k correlation
+				Non-linear correlation
+				Invented in 2018
+				Bins up numerical variables into groups to make them categorical, calculates chi-squared
+		VIDEO - FTE - Week 4
+			xgboost has done really well, won competitions
+			1. Decision Trees
+			2. Selecting features
+			Split between features and targets stratifying based on targets to keep an equal balance between the 2 classes on the train and test sets
+			Using DecisionTreeClassifier
+				initalize model
+				fit model to training features and targets
+				then evaluate performance on train and test sets
+				100% accuracy on train vs. 80% on test, means OVERFITTING
+			Make empty matplotlib figure, plot decision tree, "filled=true" means color
+			Tree is pretty deep (7 splits)
+				with each split, it has potential to double the number of nodes
+				Gini=0 means all samples are of one class
+				Leaf nodes only have 1, 2 samples in em = BAD = OVERFITTING
+			To offset deepness, set depth of tree
+				Play with max_depth to see how it changes things
+			Using RandomForestClassifier
+				play with max_features: # of features for each split that it tries to split the data with
+					by default, it's sqrt(# features)
+				GridSearchCV and Bayesian search are helpful for automatically reducing features
+			Feature Selection
+				df.corr() by default is Pearson correlation
+				Pearson: linear correlation, how much 2 variables move in the same direction
+					0 = no correlation
+			Feature Importance
+				using scikit-plot, plot_feature_importances
+				Feature importance calculates gini impurity to plot these
+			Using results from feature importance, drop 5 least important features, create new dataframe
+			
+				
+				
+					
+			
+				
+		Week 4 Reading
+		
+
+			
+				
+					
+20220211 Friday
+	Week 5: Automation and Data Science
+		FTE PDF
+		Video Lecture
+			Review from last week
+				Gini values, decision trees, random forests, feature selection, feature importance/removal
+			This week: Automation
+				Using python to run repetitive tasks
+			Can automate each step in the CRISP-DM process model. 
+			Automation Tools
+				auto EDA, auto ML, auto AI, autoDS
+				pandas-profiling, autovis, sweetvis
+			Auto-Modeling
+				Python: pycaret, TPOT, H20, etc
+				Cloud solutions: Azure, AWS, GCP, IBM Watson
+			Automation can help cross-validate models and try different samples, evaluate performance, etc
+			Data Science GUIs
+				Alteryx, Orange, RapidMiner, Cloud solutions (AWS, GCP), H20
+					No-code or low-code implementation
+					can be harder to customize, scale, integrate with other systems
+			Cloud Tools
+				Google Cloud (GCP) autoML suite - image, video text, tabular data
+				AWS - similar
+				Azure - a little behind GCP and AWS atm
+				IBM Watson - auto AI
+			Other automation ideas:
+				Linux cronjobs
+				Automated reporting: reportlab package in Python
+				Automated dashboarding
+		Video FTE Walkthrough
+		Reading
+		
+		
+		
+		
+		
+		
+		
+		
+20220220 Sunday
+	Week 6: Recommender Systems: Recommending items for users
+		FTE PDF
+		Video Lecture
+			Last week: pycaret, python scripting, automation, data science GUIs
+			This week: distance calcs for similarity, recommender systems, big data, graph analysis
+			Types of Recommender Systems
+				Content-based filtering vs. Collaborative Filtering
+					Content-based: user's preferences, item details (how user rated items they bought)
+						Based on only users' previous actions (community data not used)
+					Collaborative Filtering: making recommendations based on patterns for groups of users (age, gender, geo, occupation)
+						Hard to make recommendations for new users
+						People are bad at rating
+					Hybrid
+			Where Recommenders are Used
+				E-Commerce, movies/shows/audio, social media, news articles, any match between person-item
+			Matrix Factorization
+				Used for collaborative filtering
+				Have R matrix of users (rows) and items (columns), with entries as ratings
+				Break up into 2 matrices
+				k (rank) is # of dimensions that the matrices have 
+			PCA: Principle Component Analysis
+				The way that the matrix is divided by
+			ALS (Alternating Least Squares)
+				Break up matrix into 2 matrices
+				Minimize the cost function, minimize squared difference between real matrix and approximation
+				Add penalty term to reduce over-fitting
+			SVD: Singular Value Decomposition
+				Breaking matrix up into 3 matrices
+			Evaluation Metrics
+				Root mean square error
+				Confusion matrix (true positives, false positives, etc)
+			Similarity Metrics in Collaborative Filtering
+				Finding similar users
+				Euclidean distance, cosine distance, pearson coefficient, KNN (kinda like euclidean distance)
+			Python Recommender Packages
+				Surprise
+				Lightfm
+				Turi create
+				pyspark
+			Big Data: scaling up (bigger single machine) or out (parallelize, use a cluster)
+			Graph Theory
+				Represents connected networks, connecting nodes/vertices, can be directed (arrows) graph or undirected (no arrows) 
+				Python package: networkx
+				
+		Video FTE Walkthrough
+		Reading
+		
+		
+		
+		
+		
+		
+		
+20220225 Friday
+	Week 7: Collecting Social Media Data
+		PDF
+		Video Lecture
+			APIs, SDKs, etc
+			SQL
+			We will use SQLite
+			SQL databases typically organized into databases, tables, columns
+			SQL commands and queries follow a patttern:
+				Primary command, different options, etc.
+			Our plan: collect data from Reddit API using PRAW Python Package
+			
+			
+20220305 Saturday
+	Week 8: Social Media Data and Sentiment Analysis
+		Video Leceture
+			Sentiment Analysis: part of natural language processing (way for cpus to understand human language [chat bots, translation, etc])
+			Natural Language Processing tends to use neural networks
+			Sentiment Analysis: measures the positivity and negativity of text
+				quantified often from -1 to +1, with 0=neutral
+				strategies:
+					keyword analysis: match words to + ot - scores from a dictionary
+					machine learning: train a classifier on text features
+					rule-based: combine keywords with rules
